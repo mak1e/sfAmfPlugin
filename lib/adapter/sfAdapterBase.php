@@ -19,7 +19,7 @@ abstract class sfAdapterBase {
     }
 
     protected function to_boolean($value) {
-        return $value === 1 ? TRUE : FALSE;
+        return $value == 1 ? TRUE : FALSE;
     }
 
     protected function to_integer($value) {

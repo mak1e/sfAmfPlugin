@@ -18,6 +18,8 @@ class DoctrineRecordAdapter extends sfAdapterBase {
         $result = new stdClass();
 
         foreach ($available_columns as $cn=>$value) {
+			$cn = strtolower($cn);
+			
             if (!array_key_exists($cn, $columns)) {
 
                 if ($data->$cn instanceof Doctrine_Collection ) {
